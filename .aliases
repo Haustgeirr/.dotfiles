@@ -1,0 +1,83 @@
+# ----------------------
+# Terminal
+# ----------------------
+alias ls='ls -G'
+alias ll='ls -lh'
+alias la='ls -a'
+alias aliases='code ~/.aliases'
+alias zshrc='code ~/.zshrc'
+alias profile='code ~/.profile'
+alias zsh-reload='source ~/.zshrc'
+alias notes='code ~/notes.md'
+
+# ----------------------
+# Git 
+# ----------------------
+alias gd='git checkout development'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gb='git branch'
+alias ga='git add .'
+alias gcm='git commit -m'
+alias gpo='git push origin @'
+alias gm='git merge --no-commit'
+alias gmd='git merge development --no-commit'
+alias gpl='git pull'
+alias gss='git stash save'
+alias gsa='git stash apply'
+alias gsl='git stash list'
+alias grc='git reset --soft HEAD~1'
+alias grp='git remote prune origin'
+alias lg='lazygit'
+
+# indiscriminately delete all branches starting with bug or feature
+# use with caution
+# the following looks like a good alternative
+# git branch --merged main | grep -v main | xargs git branch -d
+alias git-delete-local='gb -d $(git branch | grep "bug\|feature")'
+
+# ----------------------
+# Misc
+# ----------------------
+
+alias composer-='COMPOSER_MEMORY_LIMIT=-1 composer'
+alias py='php yii'
+alias pa='php artisan'
+alias pi='cd ios && pod install && cd ..'
+alias rn='react-native'
+alias rn-ra='react-native run-android'
+alias rn-refresh='rm -rf node_modules && npm install --legacy-peer-deps && pi'
+alias xcode='open ios/*.xcworkspace'
+alias xcode-clear-cache='rm -rf ~/Library/Developer/Xcode/DerivedData'
+alias studio='open -a /Applications/Android\ Studio.app android'
+alias eslint='./node_modules/.bin/eslint'
+
+# ----------------------
+# Functions
+# ----------------------
+
+# Sets up an ngrok endpoint that directs to a local MAMP host
+# $ ngrok-host {projCode}.api.local
+function ngrok-host() {
+    ngrok http -host-header=rewrite "${1}":80
+}
+
+# Create a new file and open it with vs code
+function touch-c() {
+    touch $1
+    code $1
+}
+
+# creates a new file, and the directory if it doesn't exist
+function touch-p() { 
+    mkdir -p "$(dirname "$1")" && touch "$1" ; 
+}
+
+# starts the js metro server for an app from anywhere, or from the current folder
+# $ rn-start pas-app
+function rn-start() {
+    if [ -n "$1" ]; then
+        cd ~/code/$1
+    fi
+    react-native start --reset-cache
+}

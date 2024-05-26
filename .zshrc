@@ -1,5 +1,5 @@
 PS1="%1~ $: ";clear;
-source /Users/haustgeirr/.aliases
+source ~/.aliases
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/php/bin:$PATH"
