@@ -1,9 +1,9 @@
 # ----------------------
 # Terminal
 # ----------------------
-alias ls='ls -G'
-alias ll='ls -lh'
-alias la='ls -a'
+# alias ls='ls -G'
+# alias ll='ls -lh'
+# alias la='ls -a'
 alias aliases='code ~/.aliases'
 alias zshrc='code ~/.zshrc'
 alias profile='code ~/.profile'
