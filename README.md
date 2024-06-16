@@ -25,6 +25,6 @@ stow .
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-mkdir -p ~/.config/alacritty/themes
-git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+mkdir -p ~/.alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.alacritty/themes
 ```
