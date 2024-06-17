@@ -16,6 +16,12 @@ The final goal is to have a setup for my terminal and nvim which I can easily re
 
 ## Installation [WIP]
 
+### Tmux Colours
+
+There's an issue with Mac Colours when using Tmux and Nvim. To fix this follow [this Gist](https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95).
+
+### Install Dependencies
+
 ```bash
 brew install neovim ripgrep fd alacritty tmux stow
 git clone git@github.com:Haustgeirr/.dotfiles.git ~/.dotfiles
