@@ -107,3 +107,14 @@ alias c='clear'
 
 
 source ~/.aliases
+
+
+# Herd injected PHP binary.
+export PATH="/Users/haustgeirr/Library/Application Support/Herd/bin/":$PATH
+
+# bun completions
+[ -s "/Users/haustgeirr/.bun/_bun" ] && source "/Users/haustgeirr/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
