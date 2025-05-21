@@ -81,3 +81,6 @@ function rn-start() {
     fi
     react-native start --reset-cache
 }
+
+# use sail when in a sail project, throws an error otherwise
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
